@@ -14,10 +14,12 @@
     }
     //tabbed navigation
     ul.gu_profilenav {
+      word-spacing: -4px;
       li {
         margin-right: 0.5rem;
         padding-right: 0.5rem;
-        border-right: 1px solid $gray;
+        border-right: 1px solid $gray3;
+        word-spacing: normal;
         &:last-of-type {
           margin: 0;
           padding: 0;
@@ -33,7 +35,7 @@
         font-weight: 500;
         font-size: 2.2rem;
         line-height: 1.2;
-        font-family: serif;
+        font-family: $serif;
       }
     }
     // profile sections
@@ -41,7 +43,7 @@
       div.gu_profileitem {
         margin: 0;
         padding: 0.5rem 0;
-        border-top: 1px solid $gray;
+        border-top: 1px solid $gray3;
 
         &.gu_profileitem_alternatephone .gu_profileitemlabel,
         &.gu_profileitem_cv .gu_profileitemlabel,
@@ -66,7 +68,14 @@
           @include breakpoint($md) {
             float: left;
             clear: left;
-            width: 10rem;
+            width: 11rem;
+          }
+        }
+        &.gu_profileitem_website .gu_profileitemlabel {
+          @include breakpoint($md) {
+            float: left;
+            clear: left;
+            width: 11rem;
           }
         }
       }

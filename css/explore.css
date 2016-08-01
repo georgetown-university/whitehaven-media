@@ -5,10 +5,14 @@
 .explore #content div.gu_profilebody {
   margin: 0;
 }
+.explore #content ul.gu_profilenav {
+  word-spacing: -4px;
+}
 .explore #content ul.gu_profilenav li {
   margin-right: 0.5rem;
   padding-right: 0.5rem;
-  border-right: 1px solid #867875;
+  border-right: 1px solid #d7d2c5;
+  word-spacing: normal;
 }
 .explore #content ul.gu_profilenav li:last-of-type {
   margin: 0;
@@ -21,12 +25,12 @@
   font-weight: 500;
   font-size: 2.2rem;
   line-height: 1.2;
-  font-family: serif;
+  font-family: "adobe-caslon-pro", Georgia, "Times New Roman", serif;
 }
 .explore #content div.gu_profilebody div.gu_profileitem {
   margin: 0;
   padding: 0.5rem 0;
-  border-top: 1px solid #867875;
+  border-top: 1px solid #d7d2c5;
 }
 @media (min-width: 0) and (max-width: 767px) {
   .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_education .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemlabel {
@@ -44,7 +48,14 @@
   .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_education .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemlabel {
     float: left;
     clear: left;
-    width: 10rem;
+    width: 11rem;
+  }
+}
+@media (min-width: 768px) {
+  .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_website .gu_profileitemlabel {
+    float: left;
+    clear: left;
+    width: 11rem;
   }
 }
 .explore #content div.gu_profilebody div.gu_profileitem_portrait h4 {
