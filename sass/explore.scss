@@ -42,39 +42,65 @@
         padding: 0.5rem 0;
         border-top: 1px solid $gray3;
 
-        &.gu_profileitem_alternatephone .gu_profileitemlabel,
-        &.gu_profileitem_cv .gu_profileitemlabel,
-        &.gu_profileitem_education .gu_profileitemlabel,
-        &.gu_profileitem_fax .gu_profileitemlabel,
-        &.gu_profileitem_gu_alternateemail .gu_profileitemlabel,
-        &.gu_profileitem_gu_email .gu_profileitemlabel,
-        &.gu_profileitem_gu_officehours .gu_profileitemlabel,
-        &.gu_profileitem_location .gu_profileitemlabel,
-        &.gu_profileitem_phone .gu_profileitemlabel {
-          @include breakpoint($md-down) {
-            // screen reader only, from bootstrap
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            border: 0;
-          }
-          @include breakpoint($md) {
-            float: left;
-            clear: left;
-            width: 11rem;
+        .gu_profileitemcontent {
+          font-weight: 400;
+          font-size: 1rem;
+          li {
+            font-weight: inherit;
+            font-size: inherit;
           }
         }
-        &.gu_profileitem_website .gu_profileitemlabel {
-          @include breakpoint($md) {
-            float: left;
-            clear: left;
-            width: 11rem;
+
+        &.gu_profileitem_alternatephone,
+        &.gu_profileitem_cv,
+        &.gu_profileitem_fax,
+        &.gu_profileitem_gu_alternateemail,
+        &.gu_profileitem_gu_email,
+        &.gu_profileitem_gu_officehours,
+        &.gu_profileitem_location,
+        &.gu_profileitem_phone {
+          .gu_profileitemlabel {
+            @include breakpoint($md-down) {
+              // screen reader only, from bootstrap
+              position: absolute;
+              width: 1px;
+              height: 1px;
+              padding: 0;
+              margin: -1px;
+              overflow: hidden;
+              clip: rect(0,0,0,0);
+              border: 0;
+            }
+            @include breakpoint($md) {
+              float: left;
+              clear: left;
+              width: 11rem;
+            }
+          }
+          .gu_profileitemcontent {
+            overflow: auto;
           }
         }
+
+        &.gu_profileitem_website {
+          .gu_profileitemlabel {
+            @include breakpoint($md) {
+              float: left;
+              clear: left;
+              width: 11rem;
+            }
+          }
+        }
+
+        &.gu_profileitem_education,
+        &.gu_profileitem_languages {
+          .gu_profileitemcontent {
+            ul li {
+              margin-bottom: 0.25rem;
+            }
+          }
+        }
+
       }
 
       // profile photo
@@ -88,6 +114,10 @@
           padding: 0 0 2rem 3rem;
           border-color: $white;
           background: $white;
+        }
+        img {
+          max-width: 200px;
+          @include breakpoint($lg) { max-width: 300px; }
         }
       }
 

@@ -29,8 +29,16 @@
   padding: 0.5rem 0;
   border-top: 1px solid #d7d2c5;
 }
+.explore #content div.gu_profilebody div.gu_profileitem .gu_profileitemcontent {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.explore #content div.gu_profilebody div.gu_profileitem .gu_profileitemcontent li {
+  font-weight: inherit;
+  font-size: inherit;
+}
 @media (min-width: 0) and (max-width: 767px) {
-  .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_education .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemlabel {
+  .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemlabel {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -42,11 +50,14 @@
   }
 }
 @media (min-width: 768px) {
-  .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_education .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemlabel {
+  .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemlabel, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemlabel {
     float: left;
     clear: left;
     width: 11rem;
   }
+}
+.explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_alternatephone .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_cv .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_fax .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_alternateemail .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_email .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_gu_officehours .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_location .gu_profileitemcontent, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_phone .gu_profileitemcontent {
+  overflow: auto;
 }
 @media (min-width: 768px) {
   .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_website .gu_profileitemlabel {
@@ -54,6 +65,9 @@
     clear: left;
     width: 11rem;
   }
+}
+.explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_education .gu_profileitemcontent ul li, .explore #content div.gu_profilebody div.gu_profileitem.gu_profileitem_languages .gu_profileitemcontent ul li {
+  margin-bottom: 0.25rem;
 }
 .explore #content div.gu_profilebody div.gu_profileitem_portrait h4 {
   display: none;
@@ -65,6 +79,14 @@
     padding: 0 0 2rem 3rem;
     border-color: white;
     background: white;
+  }
+}
+.explore #content div.gu_profilebody div.gu_profileitem_portrait img {
+  max-width: 200px;
+}
+@media (min-width: 992px) {
+  .explore #content div.gu_profilebody div.gu_profileitem_portrait img {
+    max-width: 300px;
   }
 }
 @media (min-width: 768px) {
