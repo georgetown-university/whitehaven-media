@@ -2,12 +2,17 @@
 
   var decisionTree = {
 
-  	/* ***
-  	 * Function: init()
-  	 *     Sets up the change event for all questions.
-  	 */
+    targets: [
+      { yes: '.q2a', no: '.q2b' }, // Q1 targets
+      { yes: '.q3a', no: '.q3b' }, // Q2a targets
+      { yes: '.q3c', no: '.q3d' }, // Q2b targets
+      { yes: '#a1',  no: '#a2' },  // Q3a targets
+      { yes: '#a3',  no: '#a4' },  // Q3b targets
+      { yes: '#a5',  no: '#a6' },  // Q3c targets
+      { yes: '#a7',  no: '#a8' }   // Q3d targets
+    ],
 
-  	init: function() {
+    init: function() {
   		var _this = this;
       this.setupForm();
   		$('.decision-tree select').change(function(e) { _this.evaluateAnswer(e); });
@@ -21,24 +26,15 @@
      */
 
     setupForm: function() {
-      $('.decision-tree .question').each(function() {
+      var _this = this;
+      $('.decision-tree .question').each(function(i, value) {
         // Add label tag around question.
-        var html = '<label>' + $(this).html() + '</label>';
-
-        // Determine targets.
-        var targetYes, targetNo;
-        if ($(this).hasClass('question-1'))  { targetYes = '.question-2a';   targetNo = '.question-2b'; }
-        if ($(this).hasClass('question-2a')) { targetYes = '.question-3a';   targetNo = '.question-3b'; }
-        if ($(this).hasClass('question-2b')) { targetYes = '.question-3c';   targetNo = '.question-3d'; }
-        if ($(this).hasClass('question-3a')) { targetYes = '.answer-3a_yes'; targetNo = '.answer-3a_no'; }
-        if ($(this).hasClass('question-3b')) { targetYes = '.answer-3b_yes'; targetNo = '.answer-3b_no'; }
-        if ($(this).hasClass('question-3c')) { targetYes = '.answer-3c_yes'; targetNo = '.answer-3c_no'; }
-        if ($(this).hasClass('question-3d')) { targetYes = '.answer-3d_yes'; targetNo = '.answer-3d_no'; }
+        var html = '<label>' + $(value).html() + '</label>';
 
         // Add answer options.
         html += '<select><option value=""></option>';
-        html += '<option value="yes" data-target="' + targetYes + '">Yes</option>';
-        html += '<option value="no" data-target="' + targetNo + '">No</option>';
+        html += '<option value="yes" data-target="' + _this.targets[i].yes + '">Yes</option>';
+        html += '<option value="no" data-target="'  + _this.targets[i].no  + '">No</option>';
         html += '</select>';
 
         // Update the HTML.
@@ -54,9 +50,9 @@
 
     reset: function(e) {
       e.preventDefault();
-      var q1 = $('.question-1 select');
+      var q1 = $('.q1 select');
       q1.val('');
-      this.clearFutureQuestions(q1);
+      this.clearFutureQuestions('.q1');
     },
 
 
@@ -69,6 +65,7 @@
   	evaluateAnswer: function(e) {
   		// Get the current question.
   		var question = $(e.target);
+      console.log(question);
 
   		// Clear out answers and hide questions after current.
   		this.clearFutureQuestions(question);
@@ -86,12 +83,14 @@
   	 */
 
   	clearFutureQuestions: function(question) {
-  		var futureQuestions = question.closest('fieldset').nextAll();
-      if (futureQuestions) {
-        $('.question', futureQuestions).removeClass('show');
-        $('.question select', futureQuestions).val('');
-        this.hideAnswers();
-      }
+  		var futureQuestions = $(question).nextAll();
+
+      futureQuestions.each(function() {
+        $(this).addClass('hide').removeClass('show');
+        $('select', this).val('');
+      });
+
+      this.hideAnswers();
   	},
 
 

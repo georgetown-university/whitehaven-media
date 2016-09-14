@@ -14,6 +14,10 @@
 	display: inline-block;
 }
 
+.decision-tree .question.hide {
+  display: none;
+}
+
 /* Basic layout of the decision tree questions and answer options */
 .decision-tree label {
 	float: left;
