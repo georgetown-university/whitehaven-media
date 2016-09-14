@@ -64,14 +64,14 @@
 
   	evaluateAnswer: function(e) {
   		// Get the current question.
-  		var question = $(e.target);
-      console.log(question);
+  		var target = $(e.target);
+      var question = target.closest('.question')[0];
 
   		// Clear out answers and hide questions after current.
   		this.clearFutureQuestions(question);
 
   		// If there is an answer, figure out the next step.
-  		if (question.val()) {
+  		if (target.val()) {
 				this.nextStep(question);
 			}
   	},
@@ -86,7 +86,7 @@
   		var futureQuestions = $(question).nextAll();
 
       futureQuestions.each(function() {
-        $(this).addClass('hide').removeClass('show');
+        $(this).remove('show');
         $('select', this).val('');
       });
 
