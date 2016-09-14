@@ -1,0 +1,40 @@
+/* Setting up the decision tree questions so all but question 1 are hidden on page load */
+
+.decision-tree .question {
+	border: 1px solid #000;
+	box-sizing: border-box;
+	clear: both;
+	display: none;
+	padding: 0.5rem 1rem;
+	width: 100%;
+}
+
+.decision-tree .question.show,
+.decision-tree .q1 {
+	display: inline-block;
+}
+
+/* Basic layout of the decision tree questions and answer options */
+.decision-tree label {
+	float: left;
+}
+
+.decision-tree select {
+	float: right;
+}
+
+/* Styles for answer blocks */
+
+.decision-answer {
+	margin-top: 2rem;
+}
+
+.decision-answer .answer {
+	display: none;
+}
+
+@media only print {
+	#decision-tree-reset {
+		display: none;
+	}
+}
