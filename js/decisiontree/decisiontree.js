@@ -1,3 +1,5 @@
+/* Code minified at: https://jscompress.com/ */
+
 (function($){
 
   var decisionTree = {
@@ -72,7 +74,7 @@
 
   		// If there is an answer, figure out the next step.
   		if (target.val()) {
-				this.nextStep(question);
+				this.nextStep(target);
 			}
   	},
 
@@ -86,7 +88,7 @@
   		var futureQuestions = $(question).nextAll();
 
       futureQuestions.each(function() {
-        $(this).remove('show');
+        $(this).removeClass('show');
         $('select', this).val('');
       });
 
