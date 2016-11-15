@@ -26,8 +26,15 @@
 
 /* Basic layout of the decision tree questions and answer options */
 .decision-tree .question label {
-	display: inline-block;
-  width: calc(100% - 10rem);
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .decision-tree .question label {
+    display: inline-block;
+    width: calc(100% - 10rem);
+  }
 }
 
 .decision-tree .question button {
