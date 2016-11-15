@@ -2,12 +2,16 @@
 
 /* Setting up the decision tree questions so all but question 1 are hidden on page load */
 
+.decision-tree {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+
 .decision-tree .question {
-	border: 1px solid #000;
 	box-sizing: border-box;
 	clear: both;
 	display: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0;
 	width: 100%;
 }
 
@@ -21,12 +25,20 @@
 }
 
 /* Basic layout of the decision tree questions and answer options */
-.decision-tree label {
-	float: left;
+.decision-tree .question label {
+	display: inline-block;
+  width: calc(100% - 10rem);
 }
 
-.decision-tree select {
-	float: right;
+.decision-tree .question button {
+	display: inline-block;
+  margin: 0 0.5rem;
+  width: 4rem;
+}
+
+.decision-tree .question button.selected {
+  background: #8a2432; /* red */
+  color: #fff;
 }
 
 /* Styles for answer blocks */

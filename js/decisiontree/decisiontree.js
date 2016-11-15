@@ -33,8 +33,8 @@
         let html = '<label>' + $(value).html() + '</label>';
 
         // Add answer option buttons.
-        html += '<button data-nextstep="' + _this.nextSteps[i].yes + '">Yes</button>';
-        html += '<button data-nextstep="' + _this.nextSteps[i].no + '">No</button>';
+        html += '<button class="btn btn-default" data-nextstep="' + _this.nextSteps[i].yes + '">Yes</button>';
+        html += '<button class="btn btn-default" data-nextstep="' + _this.nextSteps[i].no + '">No</button>';
 
         // Update the HTML.
         $(this).html(html);
