@@ -17,8 +17,8 @@
     init: function() {
   		var _this = this;
       this.setupForm();
-  		$('.decision-tree select').change(function(e) { _this.evaluateAnswer(e); });
-      $('#decision-tree-reset').click(function(e) { _this.reset(e); });
+  		$('.decision-tree button').click(function(e) { _this.evaluateAnswer(e); });
+      $('#decision-tree-reset').click(function(e)  { _this.reset(e); });
   	},
 
 
@@ -34,10 +34,10 @@
         var html = '<label>' + $(value).html() + '</label>';
 
         // Add answer options.
-        html += '<select><option value=""></option>';
-        html += '<option value="yes" data-target="' + _this.targets[i].yes + '">Yes</option>';
-        html += '<option value="no" data-target="'  + _this.targets[i].no  + '">No</option>';
-        html += '</select>';
+        html += '<div class="options">';
+        html += '<button data-target="' + _this.targets[i].yes + '">Yes</button>';
+        html += '<button data-target="' + _this.targets[i].no + '">No</button>';
+        html += '</div>';
 
         // Update the HTML.
         $(this).html(html);
@@ -52,8 +52,7 @@
 
     reset: function(e) {
       e.preventDefault();
-      var q1 = $('.q1 select');
-      q1.val('');
+      var q1 = $('.q1');
       this.clearFutureQuestions('.q1');
     },
 
@@ -65,17 +64,17 @@
   	 */
 
   	evaluateAnswer: function(e) {
+      e.preventDefault();
+
   		// Get the current question.
   		var target = $(e.target);
-      var question = target.closest('.question')[0];
 
   		// Clear out answers and hide questions after current.
+      var question = target.closest('.question')[0];
   		this.clearFutureQuestions(question);
 
-  		// If there is an answer, figure out the next step.
-  		if (target.val()) {
-				this.nextStep(target);
-			}
+  		// Figure out the next step.
+  		this.nextStep(target);
   	},
 
 
@@ -88,8 +87,7 @@
   		var futureQuestions = $(question).nextAll();
 
       futureQuestions.each(function() {
-        $(this).removeClass('show');
-        $('select', this).val('');
+        $(this).hide();
       });
 
       this.hideAnswers();
@@ -99,23 +97,12 @@
   	/* ***
   	 * Function: nextStep()
   	 *     Figure out the next step based on the current answer.
-  	 *     TODO: make this less clunky later.
   	 */
 
-  	nextStep: function(question) {
-  		// Figure out the target based on the current answer.
-  		var answer = question.val();
-  		var target = $('option[value=' + answer + ']', question).attr('data-target');
-
-  		// If the target is a class, show the next question.
-  		if (target.indexOf('.') == 0) {
-  			$(target).addClass('show');
-  		}
-			// Otherwise show the next answer.
-			else {
-				this.hideAnswers();
-        $(target).slideDown();
-			}
+  	nextStep: function(current) {
+  		var target = current.attr('data-target');
+      this.hideAnswers();
+      $(target).slideDown();
   	},
 
     /* ***
