@@ -1,43 +1,40 @@
-/* Code minified at: https://jscompress.com/ */
+/* Code minified at: https://jscompress.com/ (ES2016 compression on) */
 
 (function($){
-
   var decisionTree = {
 
-    targets: [
-      { yes: '.q2a', no: '.q2b' }, // Q1 targets
-      { yes: '.q3a', no: '.q3b' }, // Q2a targets
-      { yes: '.q3c', no: '.q3d' }, // Q2b targets
-      { yes: '#a1',  no: '#a2' },  // Q3a targets
-      { yes: '#a3',  no: '#a4' },  // Q3b targets
-      { yes: '#a5',  no: '#a6' },  // Q3c targets
-      { yes: '#a7',  no: '#a8' }   // Q3d targets
+    nextSteps: [
+      { yes: '.q2a', no: '.q2b' }, // Q1 next steps
+      { yes: '.q3a', no: '.q3b' }, // Q2a next steps
+      { yes: '.q3c', no: '.q3d' }, // Q2b next steps
+      { yes: '#a1',  no: '#a2' },  // Q3a next steps
+      { yes: '#a3',  no: '#a4' },  // Q3b next steps
+      { yes: '#a5',  no: '#a6' },  // Q3c next steps
+      { yes: '#a7',  no: '#a8' }   // Q3d next steps
     ],
 
     init: function() {
-  		var _this = this;
-      this.setupForm();
-  		$('.decision-tree button').click(function(e) { _this.evaluateAnswer(e); });
-      $('#decision-tree-reset').click(function(e)  { _this.reset(e); });
+      this.setup();
+  		$('.decision-tree button').click( (e) => { this.progress(e); });
+      $('#decision-tree-reset').click(  (e) => { this.reset(e); });
   	},
 
 
     /* ***
-     * Function: setupForm()
+     * Function: setup()
      *    Sets up the decision tree form to provide answer choices for each question.
      */
 
-    setupForm: function() {
-      var _this = this;
+    setup: function() {
+      let _this = this;
+
       $('.decision-tree .question').each(function(i, value) {
         // Add label tag around question.
-        var html = '<label>' + $(value).html() + '</label>';
+        let html = '<label>' + $(value).html() + '</label>';
 
-        // Add answer options.
-        html += '<div class="options">';
-        html += '<button data-target="' + _this.targets[i].yes + '">Yes</button>';
-        html += '<button data-target="' + _this.targets[i].no + '">No</button>';
-        html += '</div>';
+        // Add answer option buttons.
+        html += '<button data-nextstep="' + _this.nextSteps[i].yes + '">Yes</button>';
+        html += '<button data-nextstep="' + _this.nextSteps[i].no + '">No</button>';
 
         // Update the HTML.
         $(this).html(html);
@@ -52,67 +49,52 @@
 
     reset: function(e) {
       e.preventDefault();
-      var q1 = $('.q1');
-      this.clearFutureQuestions('.q1');
+      this.clearFuture('.q1');
     },
 
 
   	/* ***
-  	 * Function: evaluateAnswer()
+  	 * Function: progress()
   	 *     Deals with the answer to the current question.
   	 *     Question is the one that triggered the change event in init().
   	 */
 
-  	evaluateAnswer: function(e) {
+  	progress: function(e) {
       e.preventDefault();
 
-  		// Get the current question.
-  		var target = $(e.target);
+  		let target = $(e.target),
+          question = target.closest('.question')[0],
+          nextStep = target.attr('data-nextstep');
 
-  		// Clear out answers and hide questions after current.
-      var question = target.closest('.question')[0];
-  		this.clearFutureQuestions(question);
+      // Clear out any future questions/answers.
+      this.clearFuture(question);
 
-  		// Figure out the next step.
-  		this.nextStep(target);
+      // Mark the question's selected answer.
+      target.addClass('selected');
+
+      // Show the next step.
+      $(nextStep).slideDown();
   	},
 
 
   	/* ***
-  	 * Function: clearFutureQuestions()
-  	 *     Remove answers to and hide all questions after the passed in question.
+  	 * Function: clearFuture()
+  	 *     Remove answers and hide all questions after the passed-in question.
   	 */
 
-  	clearFutureQuestions: function(question) {
-  		var futureQuestions = $(question).nextAll();
+  	clearFuture: function(question) {
+  		let futureQuestions = $(question).nextAll();
 
-      futureQuestions.each(function() {
-        $(this).hide();
-      });
+      // Hide future questions.
+      $(futureQuestions).slideUp();
 
-      this.hideAnswers();
-  	},
+      // Deselect the answers of this question and all future questions.
+      $('button', question).removeClass('selected');
+      $('button', futureQuestions).removeClass('selected');
 
-
-  	/* ***
-  	 * Function: nextStep()
-  	 *     Figure out the next step based on the current answer.
-  	 */
-
-  	nextStep: function(current) {
-  		var target = current.attr('data-target');
-      this.hideAnswers();
-      $(target).slideDown();
-  	},
-
-    /* ***
-     * Function hideAnswers()
-     *    Utility function to hide all answers.
-     */
-
-    hideAnswers: function() {
+      // Hide any visible answers.
       $('.decision-answer .answer').slideUp();
-    }
+  	}
   };
 
 
