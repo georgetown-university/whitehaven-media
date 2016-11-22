@@ -2,11 +2,6 @@
 
 /* Setting up the decision tree questions so all but question 1 are hidden on page load */
 
-.decision-tree {
-  border: 1px solid #000;
-  padding: 1rem;
-}
-
 .decision-tree .question {
 	box-sizing: border-box;
 	clear: both;
@@ -51,7 +46,7 @@
 /* Styles for answer blocks */
 
 .decision-answer {
-	margin-top: 2rem;
+	margin: 2rem 0;
 }
 
 .decision-answer .answer {
