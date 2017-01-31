@@ -39,7 +39,7 @@
 }
 
 .decision-tree .question button.selected {
-  background: #8a2432; /* red */
+  background: #3a4e26; /* green */
   color: #fff;
 }
 
