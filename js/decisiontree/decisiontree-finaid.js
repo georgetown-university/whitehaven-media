@@ -24,6 +24,9 @@
             nextStep1 = $(value).attr('data-next') + 'a',
             nextStep2 = $(value).attr('data-next') + 'b';
 
+        // Hack: If the next step is q3a (question 3), skip to show answer a2a.
+        if (nextStep1 == 'q3a') { nextStep1 = 'a2a'; }
+
         if ($(value).attr('data-options') == "marriage") {
           btnText1 = "Married / Widowed";
           btnText2 = "Divorced / Separated / Never Married";
