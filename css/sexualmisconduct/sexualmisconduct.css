@@ -46,6 +46,10 @@
   width: 100%;
 }
 
+.row > div {
+  margin-bottom: 2rem;
+}
+
 #site-canvas {
   background: #011e41 url('https://sexualassault.georgetown.edu/sites/sexualmisconduct/files/campus-bg.jpg');
   background-position: center;
@@ -79,36 +83,44 @@ p.i-want {
  * Card content: General
  */
 .card-block {
-  background: #315079;
-  border-color: #315079;
+  background: transparent;
+  border: 0;
   color: #fff;
-  padding: 0rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.card-block br {
+  display: none;
 }
 
 .card-block .card-inner {
   border: 1px solid #fff;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
+  display: block;
 }
 
 /* ---
  * Card content: Cards that serve as headers.
  */
-.card-header {
+.card-head {
+  background: #315079;
+  border-radius: 0.75rem;
   padding: 0.75rem;
 }
 
-.card-header .card-inner {
-  padding: 1.5rem;
+.card-head .card-inner {
+  padding: 1.375rem;
 }
 
-.card-header h2 {
+.card-head h2 {
   border-bottom: 1px solid #fff;
   font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 
-.card-header h2 span {
+.card-head h2 span {
   white-space: nowrap;
 }
 
@@ -116,6 +128,8 @@ p.i-want {
  * Card content: Cards that serve as services.
  */
 .card-service a {
+  background: #315079;
+  border-radius: 0.75rem;
   color: #fff;
   display: block;
   padding: 0.75rem;
@@ -129,14 +143,11 @@ p.i-want {
   background: #082446;
 }
 
-.card-service .card-inner {
-  padding: 1.5rem;
-}
-
 .card-service .card-text {
+  display: inline-block;
   font-weight: bold;
   line-height: 1.2;
-  margin: 0 0 0.5rem;
+  padding: 1.375rem;
 }
 
 .card-service .icons {
@@ -145,11 +156,7 @@ p.i-want {
   border-radius: 0.75rem;
   bottom: 0.3rem;
   position: absolute;
-  right: 2rem;
-}
-
-.card-service .icons br {
-  display: none;
+  right: 1.5rem;
 }
 
 .card-service .fa {
