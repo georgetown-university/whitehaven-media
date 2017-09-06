@@ -143,6 +143,25 @@ p.i-want {
   background: #082446;
 }
 
+.card-service a:hover .card-text:before,
+.card-service a:focus .card-text:before {
+  content: 'Click to Learn More About ';
+}
+
+.card-service a:hover .card-text:after,
+.card-service a:focus .card-text:after {
+  background: #fff;
+  border-radius: 1rem;
+  color: #082446;
+  content: '➞';
+  display: inline-block;
+  font-size: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  text-align: center;
+  width: 1rem;
+}
+
 .card-service .card-text {
   display: inline-block;
   font-weight: bold;
@@ -163,4 +182,26 @@ p.i-want {
   color: #fff;
   font-size: 0.9rem;
   margin: 0 0.3rem;
+}
+
+/* ---
+ * Cards that provide details for individual services.
+ */
+.card-detail {
+  background: #315079;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.card-detail .row {
+  margin: 0;
+}
+
+.card-detail .col {
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+.card-detail .col:first-of-type {
+  border-right: 1px solid #fff;
 }
