@@ -85,6 +85,52 @@ p.i-want {
  */
 .card-front {
   height: 100%;
+  padding: 0;
+
+  a {
+    border-radius: 0.75rem;
+    color: $white;
+    display: block;
+    height: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: $dkblue;
+      font-size: 1rem;
+      text-align: left;
+
+      .card-inner {
+        padding: 1rem;
+      }
+
+      .title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .fa {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hover {
+        display: block;
+      }
+    }
+  }
+
+  .title {
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .hover {
+    display: none;
+  }
 
   .card-inner {
     height: 100%;
@@ -97,15 +143,21 @@ p.i-want {
     margin-bottom: 2rem;
   }
 
-  a {
-    color: $white;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+  .card-text .fa {
+    display: inline;
+  }
 
-    &:hover,
-    &:focus {
+  .list-item {
+    display: list-item;
+    list-style-type: none;
 
+    &:before {
+      content: '-';
+      margin-right: 0.25rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 1rem;
     }
   }
 }
