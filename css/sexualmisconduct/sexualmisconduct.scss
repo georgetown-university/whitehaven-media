@@ -58,7 +58,7 @@ $gublue: #011e41;
  a:hover,
  a:focus {
    .hover {
-     display: block;
+     display: inline-block;
    }
  }
 
@@ -218,19 +218,6 @@ p.i-want {
 
       .card-text:before {
         content: 'Click to Learn More About ';
-      }
-
-      .card-text:after {
-        background: $white;
-        border-radius: 1rem;
-        color: $dkblue;
-        content: '➞';
-        display: inline-block;
-        font-size: 1rem;
-        height: 1rem;
-        margin-left: 0.5rem;
-        text-align: center;
-        width: 1rem;
       }
     }
   }
