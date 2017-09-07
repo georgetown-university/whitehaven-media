@@ -6,7 +6,8 @@
  * Content page: Layout
  */
 .sidebar.global,
-.l-page-title {
+.l-page-title,
+.content-workbench {
   display: none; }
 
 .l-main-page.with-sidebar,
@@ -23,7 +24,8 @@
   background-size: cover; }
 
 #main-content {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-top: 2rem; }
 
 /* ---
  * Breadcrumbs
@@ -50,7 +52,11 @@ p.i-want {
   color: #fff;
   font-family: "adobe-caslon-pro", Georgia, "Times New Roman", serif;
   font-size: 1.75rem;
+  font-style: italic;
+  margin-bottom: 1.75rem;
   text-align: center; }
+  p.i-want.front {
+    margin: 3.25rem 0; }
 
 /* ---
  * Card content: General
@@ -88,7 +94,9 @@ p.i-want {
       font-size: 1rem;
       text-align: left; }
       .card-front a:hover .card-inner, .card-front a:focus .card-inner {
-        padding: 1rem; }
+        padding: 1.5rem; }
+      .card-front a:hover .card-text, .card-front a:focus .card-text {
+        display: block; }
       .card-front a:hover .title, .card-front a:focus .title {
         font-size: 1.1rem;
         font-weight: bold;
@@ -98,14 +106,14 @@ p.i-want {
         margin: 0 0 0.5rem; }
   .card-front .title {
     display: block;
+    font-size: 1.125rem;
     text-transform: uppercase; }
   .card-front .card-inner {
-    height: 100%;
-    padding: 2rem; }
+    height: 100%; }
   .card-front .fa {
     display: block;
-    font-size: 2.5rem;
-    margin: 2rem 0; }
+    font-size: 3.6rem;
+    margin: 2.875rem 0; }
   .card-front .card-text .fa {
     display: inline; }
     .card-front .card-text .fa:before {
@@ -128,10 +136,14 @@ p.i-want {
 .card-head h2 {
   border-bottom: 1px solid #fff;
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  padding-bottom: 1rem; }
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem; }
   .card-head h2 span {
     white-space: nowrap; }
+.card-head .card-text {
+  font-size: 1rem;
+  line-height: 1.4; }
 
 /* ---
  * Card content: Cards that serve as services.
@@ -153,6 +165,7 @@ p.i-want {
   .card-service .card-text {
     display: inline-block;
     font-weight: bold;
+    font-size: 1.125rem;
     line-height: 1.2;
     padding: 1.375rem; }
   .card-service .icons {
@@ -180,7 +193,7 @@ p.i-want {
     border-left: 1px solid #fff; }
 .card-detail .locale,
 .card-detail .contact {
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 .card-detail .locale p {
   margin-bottom: 0; }
 .card-detail .contact ul {

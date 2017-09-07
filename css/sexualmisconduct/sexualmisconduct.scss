@@ -15,7 +15,8 @@ $gublue: #011e41;
  * Content page: Layout
  */
 .sidebar.global,
-.l-page-title {
+.l-page-title,
+.content-workbench {
   display: none;
 }
 
@@ -37,6 +38,7 @@ $gublue: #011e41;
 
 #main-content {
   padding-bottom: 0;
+  padding-top: 2rem;
 }
 
 /* ---
@@ -69,7 +71,13 @@ p.i-want {
   color: $white;
   font-family: $serif;
   font-size: 1.75rem;
+  font-style: italic;
+  margin-bottom: 1.75rem;
   text-align: center;
+
+  &.front {
+    margin: 3.25rem 0;
+  }
 }
 
 /* ---
@@ -117,7 +125,11 @@ p.i-want {
       text-align: left;
 
       .card-inner {
-        padding: 1rem;
+        padding: 1.5rem;
+      }
+
+      .card-text {
+        display: block;
       }
 
       .title {
@@ -135,27 +147,29 @@ p.i-want {
 
   .title {
     display: block;
+    font-size: 1.125rem;
     text-transform: uppercase;
   }
 
   .card-inner {
     height: 100%;
-    padding: 2rem;
   }
 
   .fa {
     display: block;
-    font-size: 2.5rem;
-    margin: 2rem 0;
+    font-size: 3.6rem;
+    margin: 2.875rem 0;
   }
 
   // For the arrow next to "click here".
-  .card-text .fa {
-    display: inline;
+  .card-text {
+    .fa {
+      display: inline;
 
-    &:before {
-      font-size: 1rem;
-      margin-left: 0.3rem;
+      &:before {
+        font-size: 1rem;
+        margin-left: 0.3rem;
+      }
     }
   }
 
@@ -186,12 +200,18 @@ p.i-want {
   h2 {
     border-bottom: 1px solid $white;
     font-family: $sans;
-    font-size: 1.5rem;
-    padding-bottom: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
 
     span {
       white-space: nowrap;
     }
+  }
+
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.4;
   }
 }
 
@@ -225,6 +245,7 @@ p.i-want {
   .card-text {
     display: inline-block;
     font-weight: bold;
+    font-size: 1.125rem;
     line-height: 1.2;
     padding: 1.375rem;
   }
@@ -265,7 +286,7 @@ p.i-want {
 
   .locale,
   .contact {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .locale p {
