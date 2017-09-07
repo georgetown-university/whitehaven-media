@@ -277,34 +277,45 @@ p.i-want {
 
   .col {
     margin-bottom: 0;
-    padding: 2rem;
+    padding: 3rem 2.5rem;
 
     &:first-of-type {
       border-left: 1px solid $white;
     }
   }
 
-  .locale,
-  .contact {
-    font-size: 1rem;
+  .locale {
+    p, h3 {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-weight: bold;
+      line-height: 1.5;
+    }
   }
 
-  .locale p {
-    margin-bottom: 0;
-  }
-
   .contact {
+    margin-top: 4.375rem;
+
     ul {
       list-style-type: none;
       padding: 0;
     }
 
     li {
+      font-size: 1rem;
       font-weight: bold;
 
       span {
         font-weight: normal;
       }
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
     }
 
     .fa {
@@ -321,5 +332,47 @@ p.i-want {
         width: 1.125rem;
       }
     }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  h3 {
+    color: $white;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  .services-list {
+    float: left;
+    width: calc(100% - 300px);
+
+    ul {
+      list-style-type: none;
+      margin-top: 2rem;
+      padding: 0;
+    }
+
+    li {
+      background: $white;
+      border-radius: 1.5rem;
+      color: $blue;
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin-right: 0.625rem;
+      padding: 0.75rem 1.75rem;
+    }
+  }
+
+  .map {
+    float: right;
+    width: 300px;
   }
 }
