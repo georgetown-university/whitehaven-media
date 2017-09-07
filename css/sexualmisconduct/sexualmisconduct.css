@@ -64,7 +64,7 @@ p.i-want {
  * Cards for the front page of the portal
  */
 .card-front {
-  height: 100%;
+  height: 17rem;
   padding: 0; }
   .card-front a {
     border-radius: 0.75rem;
@@ -86,7 +86,7 @@ p.i-want {
         margin-bottom: 1rem; }
       .card-front a:hover .fa, .card-front a:focus .fa {
         font-size: 1.75rem;
-        margin-bottom: 0.5rem; }
+        margin: 0 0 0.5rem; }
       .card-front a:hover .hover, .card-front a:focus .hover {
         display: block; }
   .card-front .title {
@@ -100,9 +100,12 @@ p.i-want {
   .card-front .fa {
     display: block;
     font-size: 2.5rem;
-    margin-bottom: 2rem; }
+    margin: 2rem 0; }
   .card-front .card-text .fa {
     display: inline; }
+    .card-front .card-text .fa:before {
+      font-size: 1rem;
+      margin-left: 0.3rem; }
   .card-front .list-item {
     display: list-item;
     list-style-type: none; }

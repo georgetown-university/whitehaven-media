@@ -84,7 +84,7 @@ p.i-want {
  * Cards for the front page of the portal
  */
 .card-front {
-  height: 100%;
+  height: 17rem;
   padding: 0;
 
   a {
@@ -114,7 +114,7 @@ p.i-want {
 
       .fa {
         font-size: 1.75rem;
-        margin-bottom: 0.5rem;
+        margin: 0 0 0.5rem;
       }
 
       .hover {
@@ -140,13 +140,20 @@ p.i-want {
   .fa {
     display: block;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
   }
 
+  // For the arrow next to "click here".
   .card-text .fa {
     display: inline;
+
+    &:before {
+      font-size: 1rem;
+      margin-left: 0.3rem;
+    }
   }
 
+  // For fake lists in cards.
   .list-item {
     display: list-item;
     list-style-type: none;
