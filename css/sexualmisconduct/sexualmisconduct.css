@@ -35,6 +35,16 @@
   margin-bottom: 0; }
 
 /* ---
+ * Hover utility
+ */
+.hover {
+  display: none; }
+
+a:hover .hover,
+a:focus .hover {
+  display: block; }
+
+/* ---
  * Base content
  */
 p.i-want {
@@ -87,13 +97,9 @@ p.i-want {
       .card-front a:hover .fa, .card-front a:focus .fa {
         font-size: 1.75rem;
         margin: 0 0 0.5rem; }
-      .card-front a:hover .hover, .card-front a:focus .hover {
-        display: block; }
   .card-front .title {
     display: block;
     text-transform: uppercase; }
-  .card-front .hover {
-    display: none; }
   .card-front .card-inner {
     height: 100%;
     padding: 2rem; }
