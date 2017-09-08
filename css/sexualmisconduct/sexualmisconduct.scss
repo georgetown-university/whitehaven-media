@@ -13,6 +13,7 @@ $dkblue: #082446;
 $gublue: #011e41;
 $beige: #d8d3c5;
 
+$sm: 544px;
 $lg: 992px;
 
 /* ---
@@ -298,7 +299,9 @@ p.i-want {
 
   // Location and hours information block.
   .locale {
-    @media (max-width: $lg) {
+    margin-bottom: 2rem;
+
+    @media (min-width: $sm) and (max-width: $lg) {
       float: left;
       width: 50%;
     }
@@ -316,7 +319,7 @@ p.i-want {
 
   // Contact options information block.
   .contact {
-    @media (max-width: $lg) {
+    @media (min-width: $sm) and (max-width: $lg) {
       float: left;
       width: 50%;
     }
@@ -327,6 +330,7 @@ p.i-want {
 
     ul {
       list-style-type: none;
+      margin: 0;
       padding: 0;
     }
 
@@ -355,7 +359,7 @@ p.i-want {
       border-radius: 1.5rem;
       color: $blue;
       font-size: 0.75rem;
-      margin-right: 0.25rem;
+      margin-right: 0.5rem;
       padding: 0.375rem 0;
       text-align: center;
       width: 1.5rem;
