@@ -7,9 +7,13 @@ $serif: "adobe-caslon-pro",Georgia,"Times New Roman",serif;
 $sans: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 $white: #fff;
+$black: #000;
 $blue: #315079;
 $dkblue: #082446;
 $gublue: #011e41;
+$beige: #d8d3c5;
+
+$lg: 992px;
 
 /* ---
  * Content page: Layout
@@ -46,7 +50,7 @@ $gublue: #011e41;
  */
 .breadcrumb,
 .breadcrumb a {
-  color: $white;
+  color: $black;
   margin-bottom: 0;
 }
 
@@ -87,7 +91,7 @@ p.i-want {
   background: $blue;
   border: 0;
   border-radius: 0.75rem;
-  color: $white;
+  color: $beige;
   margin-bottom: 0.5rem;
   padding: 0.75rem;
 
@@ -96,7 +100,7 @@ p.i-want {
   }
 
   .card-inner {
-    border: 1px solid $white;
+    border: 1px solid $beige;
     border-radius: 0.75rem;
     display: block;
   }
@@ -111,7 +115,7 @@ p.i-want {
 
   a {
     border-radius: 0.75rem;
-    color: $white;
+    color: $beige;
     display: block;
     height: 100%;
     padding: 0.75rem;
@@ -198,7 +202,7 @@ p.i-want {
   }
 
   h2 {
-    border-bottom: 1px solid $white;
+    border-bottom: 1px solid $beige;
     font-family: $sans;
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
@@ -223,7 +227,7 @@ p.i-want {
 
   a {
     border-radius: 0.75rem;
-    color: $white;
+    color: $beige;
     display: block;
     padding: 0.75rem;
     text-decoration: none;
@@ -252,7 +256,7 @@ p.i-want {
 
   .icons {
     background: $blue;
-    border: 1px solid $white;
+    border: 1px solid $beige;
     border-radius: 0.75rem;
     bottom: 0.3rem;
     position: absolute;
@@ -260,7 +264,7 @@ p.i-want {
   }
 
   .fa {
-    color: $white;
+    color: $beige;
     font-size: 0.9rem;
     margin: 0 0.3rem;
   }
@@ -270,6 +274,8 @@ p.i-want {
  * Cards that provide details for individual services.
  */
 .card-detail {
+  margin-top: 4rem;
+
   .row {
     flex-direction: row-reverse;
     margin: 0;
@@ -278,13 +284,25 @@ p.i-want {
   .col {
     margin-bottom: 0;
     padding: 3rem 2.5rem;
+    width: 100%;
 
     &:first-of-type {
-      border-left: 1px solid $white;
+      border-bottom: 1px solid $beige;
+
+      @media (min-width: $lg) {
+        border-bottom: 0;
+        border-left: 1px solid $beige;
+      }
     }
   }
 
+  // Location and hours information block.
   .locale {
+    @media (max-width: $lg) {
+      float: left;
+      width: 50%;
+    }
+
     p, h3 {
       font-size: 1rem;
       margin-bottom: 0;
@@ -296,8 +314,16 @@ p.i-want {
     }
   }
 
+  // Contact options information block.
   .contact {
-    margin-top: 4.375rem;
+    @media (max-width: $lg) {
+      float: left;
+      width: 50%;
+    }
+
+    @media (min-width: $lg) {
+      margin-top: 4.375rem;
+    }
 
     ul {
       list-style-type: none;
@@ -314,23 +340,36 @@ p.i-want {
     }
 
     a {
-      color: $white;
+      color: $beige;
       text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
 
+    // Font Awesome icon bullets for contact options.
     .fa {
-      background: $white;
+      background: $beige;
       border-radius: 1.5rem;
       color: $blue;
-      height: 1.5rem;
+      font-size: 0.75rem;
+      margin-right: 0.25rem;
+      padding: 0.375rem 0;
+      text-align: center;
       width: 1.5rem;
 
-      &:before {
-        display: inline-block;
-        height: 1.125rem;
-        padding: 0.375rem;
-        width: 1.125rem;
+      span {
+        display: none;
       }
+    }
+
+    i {
+      display: inline-block;
+      font-style: normal;
+      font-weight: normal;
+      padding-left: 2rem;
     }
   }
 
@@ -340,18 +379,22 @@ p.i-want {
   }
 
   h3 {
-    color: $white;
+    color: $beige;
     font-size: 1.25rem;
     font-weight: normal;
   }
 
   p {
     font-size: 1.125rem;
+    margin-bottom: 2.5rem;
   }
 
+  // List of service "tags".
   .services-list {
-    float: left;
-    width: calc(100% - 300px);
+    @media (min-width: $lg) {
+      float: left;
+      width: calc(100% - 300px);
+    }
 
     ul {
       list-style-type: none;
@@ -360,7 +403,7 @@ p.i-want {
     }
 
     li {
-      background: $white;
+      background: $beige;
       border-radius: 1.5rem;
       color: $blue;
       display: inline-block;
@@ -371,8 +414,11 @@ p.i-want {
     }
   }
 
+  // Campus map image block.
   .map {
-    float: right;
-    width: 300px;
+    @media (min-width: $lg) {
+      float: right;
+      width: 300px;
+    }
   }
 }
