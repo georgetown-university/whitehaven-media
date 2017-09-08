@@ -268,7 +268,7 @@ p.i-want {
   .info-only .card-text {
     font-weight: normal;
 
-    &:first-child {
+    &:first-of-type {
       font-weight: bold;
       padding-bottom: 0;
     }

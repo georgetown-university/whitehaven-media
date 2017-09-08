@@ -176,7 +176,7 @@ p.i-want {
     padding: 1.375rem; }
   .card-service .info-only .card-text {
     font-weight: normal; }
-    .card-service .info-only .card-text:first-child {
+    .card-service .info-only .card-text:first-of-type {
       font-weight: bold;
       padding-bottom: 0; }
   .card-service .icons {
