@@ -201,6 +201,7 @@ p.i-want {
     margin: 0; }
   .card-detail .col {
     margin-bottom: 0;
+    overflow-x: hidden;
     padding: 3rem 2.5rem;
     width: 100%; }
     .card-detail .col:first-of-type {
