@@ -82,7 +82,7 @@ p.i-want {
  * Cards for the front page of the portal
  */
 .card-front {
-  height: 17rem;
+  height: 18rem;
   padding: 0; }
   .card-front a {
     border-radius: 0.75rem;
@@ -216,7 +216,7 @@ p.i-want {
         float: left;
         width: 50%; } }
     .card-detail .locale p, .card-detail .locale h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-bottom: 0; }
     .card-detail .locale h3 {
       font-weight: bold;
@@ -233,15 +233,15 @@ p.i-want {
     margin: 0;
     padding: 0; }
   .card-detail .contact li {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: bold; }
     .card-detail .contact li span {
       font-weight: normal; }
   .card-detail .contact a {
-    color: #d8d3c5;
-    text-decoration: none; }
+    color: #d8d3c5; }
     .card-detail .contact a:hover, .card-detail .contact a:focus {
-      text-decoration: underline; }
+      color: #fff;
+      text-decoration: none; }
   .card-detail .contact .fa {
     background: #d8d3c5;
     border-radius: 1.5rem;

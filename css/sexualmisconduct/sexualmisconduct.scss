@@ -116,7 +116,7 @@ p.i-want {
  * Cards for the front page of the portal
  */
 .card-front {
-  height: 17rem;
+  height: 18rem;
   padding: 0;
 
   a {
@@ -326,7 +326,7 @@ p.i-want {
     }
 
     p, h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       margin-bottom: 0;
     }
 
@@ -354,7 +354,7 @@ p.i-want {
     }
 
     li {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: bold;
 
       span {
@@ -364,11 +364,11 @@ p.i-want {
 
     a {
       color: $beige;
-      text-decoration: none;
 
       &:hover,
       &:focus {
-        text-decoration: underline;
+        color: $white;
+        text-decoration: none;
       }
     }
 
