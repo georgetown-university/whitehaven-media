@@ -82,7 +82,7 @@ p.i-want {
  * Cards for the front page of the portal
  */
 .card-front {
-  height: 18rem;
+  height: 20rem;
   padding: 0; }
   .card-front a {
     border-radius: 0.75rem;
@@ -116,7 +116,7 @@ p.i-want {
   .card-front .fa {
     display: block;
     font-size: 3.6rem;
-    margin: 2.875rem 0; }
+    margin: 5rem 0 2.5rem 0; }
   .card-front .card-text .fa {
     display: inline; }
     .card-front .card-text .fa:before {
@@ -124,10 +124,11 @@ p.i-want {
       margin-left: 0.3rem; }
   .card-front .list-item {
     display: list-item;
-    list-style-type: none; }
+    list-style-type: none;
+    margin-left: 0.6rem;
+    text-indent: -0.5rem; }
     .card-front .list-item:before {
-      content: '-';
-      margin-right: 0.25rem; }
+      content: '- '; }
     .card-front .list-item:last-of-type {
       margin-bottom: 1rem; }
 
@@ -148,6 +149,8 @@ p.i-want {
   line-height: 1.4;
   margin-top: 1.25rem;
   padding-top: 1.25rem; }
+  .card-head .card-text a {
+    color: #fff; }
 
 /* ---
  * Card content: Cards that serve as services.
