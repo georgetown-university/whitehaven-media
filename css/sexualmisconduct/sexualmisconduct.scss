@@ -340,15 +340,6 @@ p.i-want {
       font-weight: bold;
       line-height: 1.5;
     }
-
-    a {
-      color: $beige;
-
-      &:hover,
-      &:focus {
-        color: $white;
-      }
-    }
   }
 
   // Contact options information block.
@@ -425,6 +416,15 @@ p.i-want {
   p {
     font-size: 1.125rem;
     margin-bottom: 2.5rem;
+  }
+
+  a {
+    color: $beige;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
   }
 
   // List of service "tags".
