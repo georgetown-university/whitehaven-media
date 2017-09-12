@@ -225,6 +225,10 @@ p.i-want {
     .card-detail .locale h3 {
       font-weight: bold;
       line-height: 1.5; }
+    .card-detail .locale a {
+      color: #d8d3c5; }
+      .card-detail .locale a:hover, .card-detail .locale a:focus {
+        color: #fff; }
   @media (min-width: 544px) and (max-width: 992px) {
     .card-detail .contact {
       float: left;

@@ -340,6 +340,15 @@ p.i-want {
       font-weight: bold;
       line-height: 1.5;
     }
+
+    a {
+      color: $beige;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
   }
 
   // Contact options information block.
