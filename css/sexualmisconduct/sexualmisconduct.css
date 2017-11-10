@@ -169,10 +169,6 @@ p.i-want {
       background: #082446; }
       .card-service a:hover .icons, .card-service a:focus .icons {
         background: #082446; }
-      .card-service a:hover .card-text:before, .card-service a:focus .card-text:before {
-        content: 'Click to Learn More About '; }
-      .card-service a:hover .info-only .card-text:before, .card-service a:focus .info-only .card-text:before {
-        content: ''; }
   .card-service .card-text {
     display: block;
     font-weight: bold;

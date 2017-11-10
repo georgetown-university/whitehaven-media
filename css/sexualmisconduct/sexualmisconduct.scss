@@ -253,14 +253,6 @@ p.i-want {
       .icons {
         background: $dkblue;
       }
-
-      .card-text:before {
-        content: 'Click to Learn More About ';
-      }
-
-      .info-only .card-text:before {
-        content: '';
-      }
     }
   }
 
