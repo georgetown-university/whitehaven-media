@@ -239,7 +239,7 @@ p.i-want {
     margin: 0;
     padding: 0; }
   .card-detail .contact li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: bold; }
     .card-detail .contact li span {
       font-weight: normal; }
@@ -265,12 +265,13 @@ p.i-want {
     font-weight: normal;
     padding-left: 2rem; }
   .card-detail h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3.5rem; }
+    font-size: 2.5rem; }
   .card-detail h3 {
     color: #d8d3c5;
     font-size: 1.25rem;
     font-weight: normal; }
+  .card-detail .confidentiality {
+    font-weight: bold; }
   .card-detail p {
     font-size: 1.125rem;
     margin-bottom: 2.5rem; }
