@@ -387,13 +387,18 @@ p.i-want {
       color: $blue;
       font-size: 0.75rem;
       margin-right: 0.5rem;
-      padding: 0.375rem 0;
+      padding: 0.375rem 0 0.375rem 0.2rem;
       text-align: center;
       width: 1.5rem;
 
-      span {
-        display: none;
+      // Hack to get the emails to wrap OK.
+      &.fa-envelope {
+        float: left;
       }
+    }
+
+    .email {
+      word-wrap: break-word;
     }
 
     i {

@@ -254,11 +254,13 @@ p.i-want {
     color: #315079;
     font-size: 0.75rem;
     margin-right: 0.5rem;
-    padding: 0.375rem 0;
+    padding: 0.375rem 0 0.375rem 0.2rem;
     text-align: center;
     width: 1.5rem; }
-    .card-detail .contact .fa span {
-      display: none; }
+    .card-detail .contact .fa.fa-envelope {
+      float: left; }
+  .card-detail .contact .email {
+    word-wrap: break-word; }
   .card-detail .contact i {
     display: inline-block;
     font-style: normal;
