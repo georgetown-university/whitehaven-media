@@ -135,22 +135,24 @@ p.i-want {
 /* ---
  * Card content: Cards that serve as headers.
  */
-.card-head .card-inner {
-  padding: 1.375rem; }
-.card-head h2 {
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.25rem;
-  margin-bottom: 0; }
-  .card-head h2 span {
-    white-space: nowrap; }
-.card-head .card-text {
-  border-top: 1px solid #d8d3c5;
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-top: 1.25rem;
-  padding-top: 1.25rem; }
-  .card-head .card-text a {
-    color: #fff; }
+.card-head {
+  background: #082446; }
+  .card-head .card-inner {
+    padding: 1.375rem; }
+  .card-head h2 {
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 0; }
+    .card-head h2 span {
+      white-space: nowrap; }
+  .card-head .card-text {
+    border-top: 1px solid #d8d3c5;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem; }
+    .card-head .card-text a {
+      color: #fff; }
 
 /* ---
  * Card content: Cards that serve as services.
