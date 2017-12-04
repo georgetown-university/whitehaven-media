@@ -132,6 +132,9 @@ p.i-want {
     .card-front .list-item:last-of-type {
       margin-bottom: 1rem; }
 
+.card-highlight {
+  background: #5a575a; }
+
 /* ---
  * Card content: Cards that serve as headers.
  */

@@ -11,6 +11,7 @@ $black: #000;
 $blue: #315079;
 $dkblue: #082446;
 $gublue: #011e41;
+$gugray: #5a575a;
 $beige: #d8d3c5;
 
 $sm: 544px;
@@ -198,6 +199,10 @@ p.i-want {
       margin-bottom: 1rem;
     }
   }
+}
+
+.card-highlight {
+  background: $gugray;
 }
 
 /* ---
