@@ -8,10 +8,15 @@
  * Content page: Layout
  */
 #site-canvas {
-  background-color: #747074; }
+  background-color: #96999d; }
 
 .l-main-page h1 {
   margin-bottom: 4rem; }
+
+.breadcrumb {
+  color: #333; }
+  .breadcrumb a {
+    color: #d50032; }
 
 /* ***
  * Hover utility
@@ -110,7 +115,7 @@ p.card-front {
       margin-bottom: 1rem; }
 
 .card-highlight {
-  background-color: #5a575a; }
+  background-color: #63666a; }
 
 /* ***
  * Card content: Cards that serve as headers.

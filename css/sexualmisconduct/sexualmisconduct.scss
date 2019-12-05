@@ -9,12 +9,13 @@ $serif: 'adobe-caslon-pro', Georgia, 'Times New Roman', serif;
 $sans:  'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $white:  #fff;
-$black:  #000;
+$black:  #333;
 $blue:   #315079;
 $dkblue: #082446;
-$gublue: #011e41;
-$gugray: #5a575a;
+$gublue: #041e42;
+$gugray: #63666a;
 $beige:  #d8d3c5;
+$dcred:  #d50032;
 
 $sm: 544px;
 $lg: 992px;
@@ -26,11 +27,19 @@ $lg: 992px;
  */
 
 #site-canvas {
-  background-color: lighten( $gugray, 10% );
+  background-color: lighten( $gugray, 20% );
 }
 
 .l-main-page h1 {
   margin-bottom: 4rem;
+}
+
+.breadcrumb {
+  color: $black;
+
+  a {
+    color: $dcred;
+  }
 }
 
 
