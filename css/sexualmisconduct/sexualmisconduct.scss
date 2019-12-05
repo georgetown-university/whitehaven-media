@@ -9,7 +9,7 @@ $serif: 'adobe-caslon-pro', Georgia, 'Times New Roman', serif;
 $sans:  'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $white:  #fff;
-$black:  #333;
+$black:  #000;
 $blue:   #315079;
 $gublue: #041e42;
 $gugray: #63666a;
@@ -80,6 +80,7 @@ a:focus {
  */
 
 p.i-want {
+  margin-top: 3.25rem;
   margin-bottom: 3.25rem;
   color: $white;
   font-style: italic;
@@ -87,10 +88,6 @@ p.i-want {
   line-height: 1;
   font-family: $serif;
   text-align: center;
-
-  &.front {
-    margin-top: 3.25rem;
-  }
 }
 
 
