@@ -11,7 +11,7 @@ $sans:  'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $white:  #fff;
 $black:  #333;
 $gublue: #041e42;
-$blue:   lighten( $gublue, 20% );
+$blue:   tint( $gublue, 20% );
 $gugray: #63666a;
 $stone:  #d6d2c4;
 $dcred:  #d50032;
@@ -37,7 +37,7 @@ $lg: 992px;
   color: $black;
 
   a {
-    color: $dcred;
+    color: darken( $dcred, 10% );
   }
 }
 
