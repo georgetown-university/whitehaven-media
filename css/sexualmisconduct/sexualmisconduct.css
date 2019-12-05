@@ -18,7 +18,9 @@
 .breadcrumb {
   color: #333; }
   .breadcrumb a {
-    color: #a20026; }
+    color: #041e42; }
+    .breadcrumb a:hover, .breadcrumb a:focus {
+      text-decoration: none; }
 
 aside.sidebar.global {
   display: none; }
@@ -37,7 +39,7 @@ a:focus .hover {
  * Base content
  */
 p.i-want {
-  margin: 0;
+  margin-bottom: 3.25rem;
   color: #fff;
   font-style: italic;
   font-size: 1.75rem;
@@ -45,7 +47,7 @@ p.i-want {
   font-family: "adobe-caslon-pro", Georgia, "Times New Roman", serif;
   text-align: center; }
   p.i-want.front {
-    margin: 3.25rem 0; }
+    margin-top: 3.25rem; }
 
 /* ***
  * Card content: General

@@ -43,7 +43,12 @@ $lg: 992px;
   color: $black;
 
   a {
-    color: darken( $dcred, 10% );
+    color: $gublue;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 
@@ -75,7 +80,7 @@ a:focus {
  */
 
 p.i-want {
-  margin: 0;
+  margin-bottom: 3.25rem;
   color: $white;
   font-style: italic;
   font-size: 1.75rem;
@@ -84,7 +89,7 @@ p.i-want {
   text-align: center;
 
   &.front {
-    margin: 3.25rem 0;
+    margin-top: 3.25rem;
   }
 }
 
