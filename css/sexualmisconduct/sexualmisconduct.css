@@ -10,8 +10,8 @@
 #site-canvas {
   background-color: #96999d; }
 
-.l-main-page .with-sidebar {
-  display: none; }
+.l-main-page.with-sidebar {
+  width: 100%; }
 .l-main-page h1 {
   margin-bottom: 4rem; }
 

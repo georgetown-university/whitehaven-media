@@ -30,8 +30,8 @@ $lg: 992px;
 }
 
 .l-main-page {
-  .with-sidebar {
-    display: none;
+  &.with-sidebar {
+    width: 100%;
   }
 
   h1 {
