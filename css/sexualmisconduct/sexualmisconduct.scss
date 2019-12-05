@@ -25,10 +25,6 @@ $lg: 992px;
  * Content page: Layout
  */
 
-nav.breadcrumb {
-  display: none;
-}
-
 #site-canvas {
   background-color: $gublue;
 }
@@ -80,7 +76,7 @@ p.i-want {
  * Card content: General
  */
 
-.card-block {
+p.card-block {
   margin-bottom: 0.5rem;
   padding: 0.75rem;
   border: 0;
@@ -105,7 +101,7 @@ p.i-want {
  * Cards for the front page of the portal
  */
 
-.card-front {
+p.card-front {
   height: 20rem;
   padding: 0;
 
@@ -208,6 +204,7 @@ p.i-want {
   }
 
   h2 {
+    margin-top: 0;
     margin-bottom: 0;
     font-size: 1.25rem;
     font-family: $sans;
