@@ -10,6 +10,8 @@
 #site-canvas {
   background-color: #96999d; }
 
+.l-main-page .with-sidebar {
+  display: none; }
 .l-main-page h1 {
   margin-bottom: 4rem; }
 
@@ -17,6 +19,9 @@
   color: #333; }
   .breadcrumb a {
     color: #a20026; }
+
+aside.sidebar.global {
+  display: none; }
 
 /* ***
  * Hover utility

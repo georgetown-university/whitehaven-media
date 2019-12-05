@@ -29,8 +29,14 @@ $lg: 992px;
   background-color: lighten( $gugray, 20% );
 }
 
-.l-main-page h1 {
-  margin-bottom: 4rem;
+.l-main-page {
+  .with-sidebar {
+    display: none;
+  }
+
+  h1 {
+    margin-bottom: 4rem;
+  }
 }
 
 .breadcrumb {
@@ -39,6 +45,10 @@ $lg: 992px;
   a {
     color: darken( $dcred, 10% );
   }
+}
+
+aside.sidebar.global {
+  display: none;
 }
 
 
