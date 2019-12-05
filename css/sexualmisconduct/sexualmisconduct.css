@@ -13,7 +13,7 @@
 .l-main-page.with-sidebar {
   width: 100%; }
 .l-main-page h1 {
-  margin-bottom: 4rem; }
+  display: none; }
 
 .breadcrumb {
   color: #333; }
