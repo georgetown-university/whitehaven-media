@@ -8,10 +8,10 @@
  * Content page: Layout
  */
 #site-canvas {
-  background-color: #011e41; }
+  background-color: #747074; }
 
 .l-main-page h1 {
-  color: #fff; }
+  margin-bottom: 4rem; }
 
 /* ***
  * Hover utility
@@ -41,7 +41,7 @@ p.i-want {
  * Card content: General
  */
 .card-block {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   padding: 0.75rem;
   border: 0;
   border-radius: 0.75rem;
@@ -59,6 +59,7 @@ p.i-want {
  */
 p.card-front {
   height: 20rem;
+  margin-bottom: 2rem;
   padding: 0; }
   p.card-front a {
     display: block;
