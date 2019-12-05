@@ -40,16 +40,16 @@ p.i-want {
 /* ***
  * Card content: General
  */
-p.card-block {
+.card-block {
   margin-bottom: 0.5rem;
   padding: 0.75rem;
   border: 0;
   border-radius: 0.75rem;
   background-color: #315079;
   color: #d8d3c5; }
-  p.card-block br {
+  .card-block br {
     display: none; }
-  p.card-block .card-inner {
+  .card-block .card-inner {
     display: block;
     border: 1px solid #d8d3c5;
     border-radius: 0.75rem; }
