@@ -258,7 +258,7 @@ p.card-front {
     padding-left: 2rem;
     font-style: normal;
     font-weight: normal; }
-  .card-detail h2 {
+  .card-detail h2.card-title {
     margin-bottom: 0;
     font-size: 2.5rem; }
   .card-detail h3 {
