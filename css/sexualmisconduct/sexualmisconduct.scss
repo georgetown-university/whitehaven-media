@@ -29,9 +29,15 @@ $lg: 992px;
   background-color: lighten( $gugray, 20% );
 }
 
+.page.container .row {
+  // Override Bootstrap's flexbox.
+  display: block;
+}
+
 .l-main-page {
   &.with-sidebar {
     width: 100%;
+    max-width: 100%;
   }
 
   h1 {

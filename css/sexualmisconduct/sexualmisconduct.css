@@ -10,8 +10,12 @@
 #site-canvas {
   background-color: #96999d; }
 
+.page.container .row {
+  display: block; }
+
 .l-main-page.with-sidebar {
-  width: 100%; }
+  width: 100%;
+  max-width: 100%; }
 .l-main-page h1 {
   display: none; }
 
@@ -295,5 +299,3 @@ p.card-front {
       width: 300px; } }
   .card-detail .map figcaption {
     font-size: 1rem; }
-
-/*# sourceMappingURL=sexualmisconduct.css.map */
