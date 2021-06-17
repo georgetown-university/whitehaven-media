@@ -10,10 +10,8 @@
 #site-canvas {
   background-color: #96999d; }
 
-.page.container .row {
-  display: block; }
-
 .l-main-page.with-sidebar {
+  flex: 0 0 100%;
   width: 100%;
   max-width: 100%; }
 .l-main-page h1 {
